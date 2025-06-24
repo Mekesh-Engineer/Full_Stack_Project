@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="GridX Team" />
+    <meta name="keywords" content="GridX dashboard" />
+    <meta name="theme-color" content="#ffffff" />
+    <title>GridX - Dashboard</title>
+
+    <!-- Bootstrap + Fonts -->
+    <link rel="icon" type="image/png" href="https://img.icons8.com/ios-filled/32/electrical.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+    <link href="css/dashboard.css" rel="stylesheet" />
+</head>
+
+<body class="bg-white text-dark">
+    <!-- Greeting Toast -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index: 9999">
+        <div id="greetingToast" class="toast align-items-center text-dark bg-white border-0" role="alert"
+            aria-live="assertive" aria-atomic="true">
+            <div class="d-flex">
+                <div class="toast-body">
+                    <!-- Greeting message will be inserted here -->
+                </div>
+                <button type="button" class="btn-close btn-close-dark me-2 m-auto" data-bs-dismiss="toast"
+                    aria-label="Close"></button>
+            </div>
+        </div>
+    </div>
+    <!-- Navbar -->
+    <nav
+        class="navbar navbar-light bg-white sticky-top px-3 d-flex justify-content-between align-items-center border-bottom border-light">
+        <div class="d-flex align-items-center gap-3">
+            <button class="sidebar-toggle btn btn-sm btn-outline-dark" data-bs-toggle="offcanvas"
+                data-bs-target="#sidebar" aria-controls="sidebar">
+                <i class="bi bi-list fs-4" aria-label="Toggle Sidebar"></i>
+            </button>
+            <a href="#" class="text-decoration-none text-dark fw-bold d-flex align-items-center"
+                style="font-size: 1.5rem; font-weight: bold">
+                <i class="bi bi-lightning-charge-fill me-4" aria-label="GridX Logo"></i>
+                GridX
+            </a>
+        </div>
+        <div class="d-flex align-items-center gap-3">
+            <span id="liveClock" class="fw-semibold text-secondary"
+                style="font-size: 1.2rem; font-weight: bold; color: #333;"></span>
+            <button id="themeToggle" class="btn btn-sm btn-outline-secondary" title="Toggle Theme">
+                <i class="bi bi-moon-stars-fill"></i>
+            </button>
+            <div class="input-group search-box">
+                <span class="input-group-text bg-light text-dark border-0"><i class="bi bi-search text-dark"></i></span>
+                <input type="search" class="form-control bg-light text-dark border-0" placeholder="Search..." />
+            </div>
+            <button class="icon-btn position-relative btn btn-light" title="Notifications" aria-label="Notifications">
+                <i class="bi bi-bell fs-5"></i>
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">3</span>
+            </button>
+
+            <div class="dropdown">
+                <a href="#" class="dropdown-toggle d-flex align-items-center text-dark" data-bs-toggle="dropdown">
+                    <i class="bi bi-person-circle fs-4 me-2" aria-label="User Icon"></i>
+                    <span class="d-none d-sm-inline">User</span>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end shadow-sm mt-2">
+                    <li>
+                        <a class="dropdown-item" href="#"><i class="bi bi-person me-2"></i>Profile</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="#"><i class="bi bi-gear me-2"></i>Settings</a>
+                    </li>
+                    <li>
+                        <hr class="dropdown-divider" />
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="#"><i class="bi bi-box-arrow-right me-2"></i>Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sidebar -->
+    <section class="offcanvas offcanvas-start bg-white text-dark" tabindex="-1" id="sidebar">
+        <div class="offcanvas-header border-bottom border-light">
+            <h5 class="offcanvas-title">GridX Console</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body sidebar-nav">
+            <a href="dashboard.html" class="sidebar-link" id="nav-dashboard">
+                <i class="bi bi-bar-chart-fill"></i>
+                <span class="nav-label">Dashboard</span>
+            </a>
+            <a href="renewable.html" class="sidebar-link">
+                <i class="bi bi-sun-fill"></i>
+                <span class="nav-label">Renewable Input</span>
+            </a>
+            <a href="billing.html" class="sidebar-link">
+                <i class="bi bi-receipt-cutoff"></i>
+                <span class="nav-label">Smart Billing</span>
+            </a>
+            <a href="forecast.html" class="sidebar-link">
+                <i class="bi bi-cpu-fill"></i>
+                <span class="nav-label">AI Forecast</span>
+            </a>
+            <a href="maintenance.html" class="sidebar-link">
+                <i class="bi bi-tools"></i> <span class="nav-label">Maintenance</span>
+            </a>
+            <a href="scada.html" class="sidebar-link">
+                <i class="bi bi-sliders"></i>
+                <span class="nav-label">SCADA Control</span>
+            </a>
+            <a href="trading.html" class="sidebar-link">
+                <i class="bi bi-currency-exchange"></i>
+                <span class="nav-label">P2P Trading</span>
+            </a>
+            <hr class="border-light" />
+            <a href="profile.html" class="sidebar-link">
+                <i class="bi bi-person-circle"></i>
+                <span class="nav-label">Profile</span>
+            </a>
+            <a href="#" class="sidebar-link" id="sidebar-logout">
+                <i class="bi bi-power"></i> <span class="nav-label">Logout</span>
+            </a>
+        </div>
+    </section>
+
+    <main class="container-fluid py-4">
+        <!-- Filters -->
+        <section class="dashboard__filters row g-3 align-items-end mb-4">
+            <div class="col-md-3">
+                <label for="startDate" class="form-label">Start Date:</label>
+                <input type="date" id="startDate" class="form-control form-control-sm bg-light text-dark" />
+            </div>
+            <div class="col-md-3">
+                <label for="endDate" class="form-label">End Date:</label>
+                <input type="date" id="endDate" class="form-control form-control-sm bg-light text-dark" />
+            </div>
+            <div class="col-md-2">
+                <button id="searchBtn" class="btn btn-dark w-100">Search</button>
+            </div>
+        </section>
+
+        <!-- Dynamic Cards Container -->
+        <section class="dashboard__top-cards" id="cardContainer"></section>
+
+        <!-- Highlight Cards -->
+        <section class="dashboard__highlights">
+            <div class="highlight-card tilt">
+                <h3 class="highlight-card__title">
+                    <i class="bi bi-book me-2" aria-hidden="true"></i>GridX
+                    Documentation
+                </h3>
+                <p class="highlight-card__desc">
+                    Explore patterns and best practices for GridX.
+                </p>
+                <p class="extra-content" aria-hidden="true">
+                    Full API details, component usage, code examples, and setup guides.
+                </p>
+                <a href="#" class="highlight-card__link" aria-expanded="false" aria-controls="doc-content"
+                    style="color: black">Read more &rarr;</a>
+                <div class="shine"></div>
+                <div id="doc-content" class="extra-content" style="display: none">
+                    <p>
+                        Discover in-depth tutorials, comprehensive guides, and community
+                        forums to enhance your GridX experience.
+                    </p>
+                </div>
+            </div>
+
+            <div class="highlight-card highlight-card--info tilt">
+                <h3 class="highlight-card__title">
+                    <i class="bi bi-bar-chart-line me-2" aria-hidden="true"></i>Data
+                    Insights
+                </h3>
+                <p class="highlight-card__desc">
+                    Data clarity and performance monitoring.
+                </p>
+                <p class="extra-content" aria-hidden="true">
+                    Real-time metrics, alert status, and health overview.
+                </p>
+                <a href="#" class="highlight-card__link" aria-expanded="false" aria-controls="insights-content">Read
+                    more &rarr;</a>
+                <div class="shine"></div>
+                <div id="insights-content" class="extra-content" style="display: none">
+                    <p>
+                        Access detailed analytics, custom reports, and predictive insights
+                        to drive data-driven decisions.
+                    </p>
+                </div>
+            </div>
+
+            <div class="highlight-card highlight-card--promo tilt">
+                <h3 class="highlight-card__promo-title">
+                    <i class="bi bi-people-fill me-2" aria-hidden="true"></i>Join the
+                    GridX Ecosystem
+                </h3>
+                <p class="highlight-card__desc">
+                    Optimize energy, SCADA, and AI—all in one place.
+                </p>
+                <p class="extra-content" aria-hidden="true">
+                    Plugin support, integrations, and professional services.
+                </p>
+                <a href="#" class="highlight-card__link" aria-expanded="false" aria-controls="ecosystem-content">Read
+                    more &rarr;</a>
+                <div class="shine"></div>
+                <div id="ecosystem-content" class="extra-content" style="display: none">
+                    <p>
+                        Collaborate with industry leaders, access exclusive resources, and
+                        leverage cutting-edge technology.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Charts Section -->
+        <section class="row g-4">
+            <article class="col-12 col-md-6">
+                <section class="dashboard-card dashboard-card--dark h-100 shadow-hover">
+                    <header class="p-4 pb-0">
+                        <div class="d-flex align-items-center mb-1">
+                            <i class="bi bi-bar-chart-fill me-2" aria-label="Chart Icon"></i>
+                            <h4 class="mb-0 fw-bold">Active Users Overview</h4>
+                        </div>
+                    </header>
+                    <figure class="dashboard-card__chart">
+                        <canvas id="usersBarChart" aria-label="Active Users Chart" role="img"></canvas>
+                    </figure>
+                </section>
+            </article>
+
+            <article class="col-12 col-md-6">
+                <section class="dashboard-card dashboard-card--light h-100 shadow-hover tilt">
+                    <header class="p-4 pb-0">
+                        <div class="d-flex align-items-center mb-1">
+                            <i class="bi bi-graph-up-arrow me-2" aria-label="Sales Icon"></i>
+                            <h5 class="mb-0 fw-bold">Sales Overview</h5>
+                            <span class="text-success fw-semibold ms-2">(+5)</span>
+                            <span class="text-secondary ms-1 small">more in 2021</span>
+                        </div>
+                    </header>
+                    <figure class="dashboard-card__chart">
+                        <canvas id="salesAreaChart" aria-label="Sales Overview" role="img"></canvas>
+                    </figure>
+                </section>
+            </article>
+        </section>
+
+
+
+    </main>
+
+    <!-- JS Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/dashboard.js" defer></script>
+</body>
+
+</html>
