@@ -1,4 +1,4 @@
-# ⚡ GridX: AI-IoT Integrated Smart Grid System
+# ⚡ GridX: AI-IoT Integrated Smart Grid System (still has changes)
 
 ## 🔹 One-Line Summary
 
