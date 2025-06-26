@@ -1,7 +1,5 @@
 # ⚡ GridX: AI-IoT Integrated Smart Grid System
 
-
-
 ## 🔹 One-Line Summary
 
 A modular full-stack smart grid management system integrating AI, IoT, billing, and control to modernize energy infrastructure.
@@ -10,21 +8,21 @@ A modular full-stack smart grid management system integrating AI, IoT, billing, 
 
 ## 📑 Table of Contents
 
-* [🔍 Project Overview](#-project-overview)
-* [🧱 Tech Stack](#-tech-stack)
-* [📁 Folder Structure](#-folder-structure)
-* [🚀 Features](#-features)
-* [🖥️ Screenshots / GIFs](#️-screenshots--gifs)
-* [⚙️ Setup Instructions](#️-setup-instructions)
-* [🔒 Authentication & Access Control](#-authentication--access-control)
-* [📡 IoT Integration](#-iot-integration)
-* [🤖 AI Module APIs](#-ai-module-apis)
-* [🧪 Testing](#-testing)
-* [☁️ Deployment](#-deployment)
-* [📄 Documentation](#-documentation)
-* [🤝 Contributing](#-contributing)
-* [📜 License](#-license)
-* [📧 Contact / Credits](#-contact--credits)
+- [🔍 Project Overview](#-project-overview)
+- [🧱 Tech Stack](#-tech-stack)
+- [📁 Folder Structure](#-folder-structure)
+- [🚀 Features](#-features)
+- [🖥️ Screenshots / GIFs](#️-screenshots--gifs)
+- [⚙️ Setup Instructions](#️-setup-instructions)
+- [🔒 Authentication & Access Control](#-authentication--access-control)
+- [📡 IoT Integration](#-iot-integration)
+- [🤖 AI Module APIs](#-ai-module-apis)
+- [🧪 Testing](#-testing)
+- [☁️ Deployment](#-deployment)
+- [📄 Documentation](#-documentation)
+- [🤝 Contributing](#-contributing)
+- [📜 License](#-license)
+- [📧 Contact / Credits](#-contact--credits)
 
 ---
 
@@ -34,13 +32,13 @@ A modular full-stack smart grid management system integrating AI, IoT, billing, 
 
 ### 🔑 Key Features
 
-* Real-time Grid Monitoring Dashboard
-* AI-based Load Forecasting and Fault Detection
-* Smart Metering and Dynamic Billing
-* SCADA-style Load Control and Simulation
-* Predictive Maintenance Alerts
-* Role-based Admin/Operator/User Access
-* Optional Blockchain-based P2P Energy Trading
+- Real-time Grid Monitoring Dashboard
+- AI-based Load Forecasting and Fault Detection
+- Smart Metering and Dynamic Billing
+- SCADA-style Load Control and Simulation
+- Predictive Maintenance Alerts
+- Role-based Admin/Operator/User Access
+- Optional Blockchain-based P2P Energy Trading
 
 ---
 
@@ -86,19 +84,19 @@ GridX/
 
 ## 🚀 Features
 
-* 📊 Live voltage/current/power charts
-* 💵 Meter-wise usage + real-time billing
-* 🌞 Renewable energy share & visual input (pie chart)
-* 🤖 AI Forecasting & Fault Detection (ML models)
-* 🛠️ Predictive maintenance table (health status)
-* 🎛️ SCADA-like controls (toggle relays/load)
-* 🔁 Blockchain-powered P2P Trading (Web3.js + Ganache)
+- 📊 Live voltage/current/power charts
+- 💵 Meter-wise usage + real-time billing
+- 🌞 Renewable energy share & visual input (pie chart)
+- 🤖 AI Forecasting & Fault Detection (ML models)
+- 🛠️ Predictive maintenance table (health status)
+- 🎛️ SCADA-like controls (toggle relays/load)
+- 🔁 Blockchain-powered P2P Trading (Web3.js + Ganache)
 
 ---
 
 ## 🖥️ Screenshots / GIFs
 
-> *(Add UI images of dashboard, billing, maintenance cards, etc.)*
+> _(Add UI images of dashboard, billing, maintenance cards, etc.)_
 
 ---
 
@@ -106,15 +104,15 @@ GridX/
 
 ### 🧰 Prerequisites
 
-* Node.js v18+
-* Python 3.8+
-* MongoDB Atlas account
-* MQTT Broker (Mosquitto or Firebase RTDB)
+- Node.js v18+
+- Python 3.8+
+- MongoDB Atlas account
+- MQTT Broker (Mosquitto or Firebase RTDB)
 
 ### 🔧 Configuration
 
 1. Copy `.env.example` → `.env`
-2. Set MongoDB URI, JWT\_SECRET, MQTT\_BROKER\_URL
+2. Set MongoDB URI, JWT_SECRET, MQTT_BROKER_URL
 
 ### 🔌 Run Locally
 
@@ -137,34 +135,34 @@ Open frontend/dashboard.html in browser
 
 ## 🔒 Authentication & Access Control
 
-* JWT-based login system
-* Roles: Admin, Operator, User
-* Role-based route protection on backend
+- JWT-based login system
+- Roles: Admin, Operator, User
+- Role-based route protection on backend
 
 ---
 
 ## 📡 IoT Integration
 
-* ESP32 reads voltage/current & publishes over MQTT
-* MQTT.js subscriber in backend
-* Firebase RTDB optional as alternative transport layer
+- ESP32 reads voltage/current & publishes over MQTT
+- MQTT.js subscriber in backend
+- Firebase RTDB optional as alternative transport layer
 
 ---
 
 ## 🤖 AI Module APIs
 
-| Endpoint       | Method | Input                    | Output               |
-| -------------- | ------ | ------------------------ | -------------------- |
-| /predict/load  | POST   | { date: "2025-06-22" }   | { forecast: \[...] } |
-| /predict/fault | POST   | { sensor\_data: \[...] } | { status: "normal" } |
+| Endpoint       | Method | Input                   | Output               |
+| -------------- | ------ | ----------------------- | -------------------- |
+| /predict/load  | POST   | { date: "2025-06-22" }  | { forecast: \[...] } |
+| /predict/fault | POST   | { sensor_data: \[...] } | { status: "normal" } |
 
 ---
 
 ## 🧪 Testing
 
-* API testing via Postman collections
-* ESP32 test scripts
-* Flask unit tests (PyTest)
+- API testing via Postman collections
+- ESP32 test scripts
+- Flask unit tests (PyTest)
 
 ---
 
@@ -181,8 +179,8 @@ Open frontend/dashboard.html in browser
 
 ## 📄 Documentation
 
-* 📊 Presentation PDF: \[Link to your slide deck/report]
-* 📐 Circuit Diagrams: \[Add images or schematic links]
+- 📊 Presentation PDF: \[Link to your slide deck/report]
+- 📐 Circuit Diagrams: \[Add images or schematic links]
 
 ---
 
